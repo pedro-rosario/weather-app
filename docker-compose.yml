@@ -1,0 +1,21 @@
+services:
+  app:
+    image: node:18.19.0
+    build:
+      dockerfile: Dockerfile.dev
+    command: npm run dev
+    depends_on:
+      - redis
+    links:
+      - redis
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
+    environment:
+      - REDIS_PORT=6379

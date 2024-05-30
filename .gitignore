@@ -1,0 +1,16 @@
+# Dependency directories
+/node_modules
+/.pnp
+.pnp.js
+
+# Typescript generated files
+dist/
+
+# IDE/editor specific files
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
